@@ -3,12 +3,12 @@
 require_once('./config/database.php');
 session_start();
 
-if (!isset($_SESSION['name'])) {
+if (isset($_SESSION['name'])) {
   header('location:index.php');
 }
-if (isset($_SESSION['logout']) == true) {
-  echo "<div id='notice' onclick='hapusNotice()' style='padding:4px 10px; cursor:pointer; color:#fff;text-align:center; background:red; width:100%;'>Anda telah keluar dari program</div>";
-}
+// if (isset($_SESSION['logout']) == true) {
+//   echo "<div id='notice' onclick='hapusNotice()' style='padding:4px 10px; cursor:pointer; color:#fff;text-align:center; background:red; width:100%;'>Anda telah keluar dari program</div>";
+// }
 if (isset($_POST['submit'])) {
   $email = $_POST['email'];
   $password = trim($_POST['password']);
@@ -25,6 +25,7 @@ if (isset($_POST['submit'])) {
     $row_user = mysqli_fetch_assoc($query);
     if (password_verify($password, $row_user['password'])) {
       $_SESSION['name'] = $row_user['name'];
+      $_SESSION['id'] = $row_user['id'];
       header('location:index.php');
     } else {
       echo "<div id='notice' onclick='hapusNotice()' style='padding:4px 10px; cursor:pointer; color:#fff;text-align:center; background:red; width:100%;'>Email atau Password Salah</div>";

@@ -66,7 +66,25 @@ if (!isset($_SESSION['name'])) {
             </li>
 
           </ul>
-
+          <!-- Logout Modal-->
+          <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Yakin ingin keluar ?</h5>
+                  <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                  </button>
+                </div>
+                <div class="modal-body">Jika yakin ingin keluar silahkan tekan tombol logout</div>
+                <div class="modal-footer">
+                  <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                  <a class="btn btn-primary" href="logout.php">Logout</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </nav>
         <!-- End of Topbar -->
 
@@ -74,17 +92,14 @@ if (!isset($_SESSION['name'])) {
         <?php
         if (isset($_GET['page'])) {
           $page = $_GET['page'];
+          $id = $_GET['id'] ?? '';
 
-          switch ($page) {
-            case 'rak-depan':
-              include './rak_depan.php';
-              break;
-            case 'rak-belakang':
-              include './rak_belakang.php';
-              break;
-            default:
-              echo "Maaf Halaman tidak ditemukan";
-              break;
+          if ($page == 'rak-depan') {
+            include './rak_depan.php';
+          } else if ($page == 'edit-rak-depan' && $id != '') {
+            include "./edit-rak-depan.php";
+          } else if ($page == 'edit-rak-depan') {
+            include './rak_belakang.php';
           }
         } else {
           include './dashboard.php';

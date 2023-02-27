@@ -19,25 +19,7 @@
     <i class="fas fa-angle-up"></i>
   </a>
 
-  <!-- Logout Modal-->
-  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Yakin ingin keluar ?</h5>
-          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">×</span>
-          </button>
-        </div>
-        <div class="modal-body">Jika yakin ingin keluar silahkan tekan tombol logout</div>
-        <div class="modal-footer">
-          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="login.php">Logout</a>
-        </div>
-      </div>
-    </div>
-  </div>
+
 
 
   <!-- Bootstrap core JavaScript-->
@@ -51,21 +33,17 @@
   <script src="public/assets/js/sb-admin-2.min.js"></script>
 
   <!-- Page level plugins -->
-  <script src="public/assets/vendor/chart.js/Chart.min.js"></script>
+  <!-- <script src="public/assets/vendor/chart.js/Chart.min.js"></script> -->
 
   <!-- Page level custom scripts -->
-  <script src="public/assets/js/demo/chart-area-demo.js"></script>
-  <script src="public/assets/js/demo/chart-pie-demo.js"></script>
+  <!-- <script src="public/assets/js/demo/chart-area-demo.js"></script> -->
+  <!-- <script src="public/assets/js/demo/chart-pie-demo.js"></script> -->
   <!-- <script src="https://code.jquery.com/jquery-3.5.1.js"></script> -->
-
   <script type=" text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js">
   </script>
   <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
-  <script>
-$(document).ready(function() {
-  $('#example').DataTable();
-});
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.2/dist/sweetalert2.all.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   </body>
 
   </html>
