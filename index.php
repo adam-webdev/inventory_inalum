@@ -52,10 +52,10 @@ if (!isset($_SESSION['name'])) {
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                <a class="dropdown-item" href="#">
+                <!-- <a class="dropdown-item" href="#">
                   <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                   Profile
-                </a>
+                </a> -->
 
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="logout.php" data-toggle="modal" data-target="#logoutModal">
@@ -98,11 +98,13 @@ if (!isset($_SESSION['name'])) {
             include './rak_depan.php';
           } else if ($page == 'edit-rak-depan' && $id != '') {
             include "./edit-rak-depan.php";
-          } else if ($page == 'edit-rak-depan') {
+          } else if ($page == 'edit-rak-belakang' && $id != '') {
+            include "./edit-rak-belakang.php";
+          } else if ($page == 'rak-belakang') {
             include './rak_belakang.php';
+          } else if ($page == 'dashboard') {
+            include './dashboard.php';
           }
-        } else {
-          include './dashboard.php';
         }
 
         ?>

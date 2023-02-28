@@ -69,7 +69,8 @@ function validasi_input($data)
 
 ?>
 
-<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+  aria-hidden="true">
   <div class="modal-dialog ">
     <div class="modal-content">
       <div class="modal-header">
@@ -104,13 +105,15 @@ function validasi_input($data)
             <div class="col-md-6">
               <div class="d-flex align-items-centers justify-content-center">
                 <label for="meker1">HEWRITCH</label>
-                <input type="radio" name="meker" id="meker1" class=" ml-2" value="HERWITCH" style="width:25px; height:25px;cursor:pointer" required>
+                <input type="radio" name="meker" id="meker1" class=" ml-2" value="HERWITCH"
+                  style="width:25px; height:25px;cursor:pointer" required>
               </div>
             </div>
             <div class="col-md-6 ">
               <div class="d-flex align-items-centers justify-content-center">
                 <label for="meker2">HYCASHT</label>
-                <input type="radio" name="meker" id="meker2" class=" ml-2" value="HYCASHT" style="width:25px; height:25px;cursor:pointer">
+                <input type="radio" name="meker" id="meker2" class=" ml-2" value="HYCASHT"
+                  style="width:25px; height:25px;cursor:pointer">
               </div>
             </div>
           </div>
@@ -126,18 +129,22 @@ function validasi_input($data)
               <input type="text" name="jumlah" id="jumlah" class="form-control" required>
             </div>
           </div>
+          <p>Penempatan :</p>
+
           <div class="row  mt-2 mb-2">
             <div class="col-md-6">
               <div class="d-flex align-items-centers justify-content-center">
                 <label for="meker1">ALCPL</label>
-                <input type="radio" name="pilihan_penempatan" id="meker1" class=" ml-2" value="ALCPL" style="width:25px; height:25px;cursor:pointer">
+                <input type="radio" name="pilihan_penempatan" id="meker1" class=" ml-2" value="ALCPL"
+                  style="width:25px; height:25px;cursor:pointer">
               </div>
 
             </div>
             <div class="col-md-6 ">
               <div class="d-flex align-items-centers justify-content-center">
                 <label for="meker2">BCPL</label>
-                <input type="radio" name="pilihan_penempatan" id="meker2" class=" ml-2" value="BCPL" style="width:25px; height:25px;cursor:pointer">
+                <input type="radio" name="pilihan_penempatan" id="meker2" class=" ml-2" value="BCPL"
+                  style="width:25px; height:25px;cursor:pointer">
               </div>
             </div>
           </div>
@@ -162,10 +169,12 @@ function validasi_input($data)
 
 
 <div class="card p-4 m-4">
-  <div style="width:150px" class="mb-4">
+  <div class="mb-4 d-flex justify-content-between">
 
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg"> + Tambah
+    <button type="button" class="btn btn-primary mr-4" data-toggle="modal" data-target=".bd-example-modal-lg"> + Tambah
       Data</button>
+    <!-- <a type="button" href="cetak-rakdepan.php" class="btn btn-primary"> + Cetak PDF
+    </a> -->
 
   </div>
   <table id="example" class="table table-striped table-bordered" style="width:100%">
@@ -189,24 +198,27 @@ function validasi_input($data)
       $no = 1;
       while ($row = mysqli_fetch_assoc($query)) {
       ?>
-        <tr>
-          <td><?= $no++ ?></td>
-          <td><?= $row['tanggal'] ?></td>
-          <td><?= $row['no_resi'] ?></td>
-          <td><?= $row['nama_sparepart'] ?></td>
-          <td><?= $row['meker'] ?></td>
-          <td><?= $row['no_rak'] ?></td>
-          <td><?= $row['jumlah'] ?></td>
-          <td><?= $row['penempatan'] ?></td>
-          <td align="center" width="15%">
-            <a href="index.php?page=edit-rak-depan&id=<?= $row['id'] ?>" data-toggle="tooltip" title="Edit" style="background:  #2A3042;color:#ffffff;" class="d-none  d-sm-inline-block btn btn-sm shadow-sm">
-              <i class="fas fa-edit fa-sm text-white-50"></i>
-            </a>
-            <a href="delete-rak-depan.php?id=<?= $row['id'] ?>" data-toggle="tooltip" title="Hapus" onclick="return confirm('Yakin Ingin menghapus data?')" style="background: red" class="d-none d-sm-inline-block btn btn-sm  shadow-sm">
-              <i class="fas fa-trash-alt fa-sm text-white-50"></i>
-            </a>
-          </td>
-        </tr>
+      <tr>
+        <td><?= $no++ ?></td>
+        <td><?= DateTime::createFromFormat('Y-m-d', $row['tanggal'])->format('d-m-Y') ?></td>
+        <td><?= $row['no_resi'] ?></td>
+        <td><?= $row['nama_sparepart'] ?></td>
+        <td><?= $row['meker'] ?></td>
+        <td><?= $row['no_rak'] ?></td>
+        <td><?= $row['jumlah'] ?></td>
+        <td><?= $row['penempatan'] ?></td>
+        <td align="center" width="15%">
+          <a href="index.php?page=edit-rak-depan&id=<?= $row['id'] ?>" data-toggle="tooltip" title="Edit"
+            style="background:  #2A3042;color:#ffffff;" class="d-none  d-sm-inline-block btn btn-sm shadow-sm">
+            <i class="fas fa-edit fa-sm text-white-50"></i>
+          </a>
+          <a href="delete-rak-depan.php?id=<?= $row['id'] ?>" data-toggle="tooltip" title="Hapus"
+            onclick="return confirm('Yakin Ingin menghapus data?')" style="background: red"
+            class="d-none d-sm-inline-block btn btn-sm  shadow-sm">
+            <i class="fas fa-trash-alt fa-sm text-white-50"></i>
+          </a>
+        </td>
+      </tr>
       <?php
       }
       ?>
@@ -228,13 +240,13 @@ function validasi_input($data)
 </div>
 
 <script>
-  $(document).ready(function() {
-    $('#example').DataTable();
+$(document).ready(function() {
+  $('#example').DataTable();
 
-    $('input[type=radio][name=pilihan_penempatan]').change(function() {
-      if (this.value == 'ALCPL') {
-        $('#alcpl').html(
-          `
+  $('input[type=radio][name=pilihan_penempatan]').change(function() {
+    if (this.value == 'ALCPL') {
+      $('#alcpl').html(
+        `
         <div id="alcpl-child">
          <div class="d-flex align-items-centers justify-content-center">
               <label for="meker1">ACD</label>
@@ -258,11 +270,11 @@ function validasi_input($data)
                 style="width:25px; height:25px;cursor:pointer">
             </div>
             </div>`
-        )
-        $('#bcpl-child').remove()
-      } else if (this.value == 'BCPL') {
-        $('#bcpl').html(
-          `<div id="bcpl-child">
+      )
+      $('#bcpl-child').remove()
+    } else if (this.value == 'BCPL') {
+      $('#bcpl').html(
+        `<div id="bcpl-child">
         <div class="d-flex align-items-centers justify-content-center">
               <label for="meker5">CHARGIN MACHINE</label>
               <input type="radio" name="penempatan" id="meker5" class=" ml-2" value="BCPL Charging Machine"
@@ -286,11 +298,11 @@ function validasi_input($data)
                 style="width:25px; height:25px;cursor:pointer">
             </div>
             </div>`
-        )
-        $('#alcpl-child').remove()
+      )
+      $('#alcpl-child').remove()
 
-      }
-    });
-
+    }
   });
+
+});
 </script>

@@ -26,7 +26,7 @@ if (isset($_POST['submit'])) {
     if (password_verify($password, $row_user['password'])) {
       $_SESSION['name'] = $row_user['name'];
       $_SESSION['id'] = $row_user['id'];
-      header('location:index.php');
+      header('location:index.php?page=dashboard');
     } else {
       echo "<div id='notice' onclick='hapusNotice()' style='padding:4px 10px; cursor:pointer; color:#fff;text-align:center; background:red; width:100%;'>Email atau Password Salah</div>";
     }
@@ -67,9 +67,7 @@ if (isset($_POST['submit'])) {
 
   <!-- Custom fonts for this template-->
   <link href="public/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-  <link
-    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
   <!-- Custom styles for this template-->
   <link href="public/assets/css/sb-admin-2.min.css" rel="stylesheet">
@@ -106,12 +104,10 @@ if (isset($_POST['submit'])) {
                   </div>
                   <form class="user" method="post" action="">
                     <div class="form-group">
-                      <input type="email" class="form-control " name="email" id="exampleInputEmail"
-                        aria-describedby="emailHelp" placeholder="Enter Email Address...">
+                      <input type="email" class="form-control " name="email" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address...">
                     </div>
                     <div class="form-group">
-                      <input type="password" class="form-control " name="password" id="exampleInputPassword"
-                        placeholder="Password">
+                      <input type="password" class="form-control " name="password" id="exampleInputPassword" placeholder="Password">
                     </div>
                     <!-- <div class="form-group">
                       <div class="custom-control custom-checkbox small">
@@ -154,9 +150,9 @@ if (isset($_POST['submit'])) {
   <!-- Custom scripts for all pages-->
   <script src="public/assets/js/sb-admin-2.min.js"></script>
   <script>
-  function hapusNotice() {
-    document.getElementById("notice").style.display = "none";
-  }
+    function hapusNotice() {
+      document.getElementById("notice").style.display = "none";
+    }
   </script>
 </body>
 

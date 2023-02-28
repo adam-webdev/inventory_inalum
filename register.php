@@ -17,7 +17,7 @@ if (isset($_POST['submit'])) {
     $datenow = date('Y-m-d');
     $name = $_POST['name'];
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-    $sql = "INSERT INTO users (name, email, password, created_at) VALUES ('$username','$email','$password','$datenow')";
+    $sql = "INSERT INTO users (name, email, password, created_at) VALUES ('$name','$email','$password','$datenow')";
     $query = mysqli_query($conn, $sql);
     if ($query) {
       header('Location: login.php');
