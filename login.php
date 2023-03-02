@@ -71,19 +71,23 @@ if (isset($_POST['submit'])) {
 
   <!-- Custom styles for this template-->
   <link href="public/assets/css/sb-admin-2.min.css" rel="stylesheet">
-  <!-- <style>
-  body {
-    background: url('../public/assets/img/bg.png') no-repeat !important;
-    background-color: black;
-    background-size: cover;
-  }
-  </style> -->
+  <style>
+    body {
+
+      background: linear-gradient(rgba(0, 0, 0, 0.7),
+          rgba(0, 0, 0, 0.7)), url('./public/assets/img/bg.jpeg') no-repeat !important;
+      background-size: cover;
+      background-position: center;
+      background-blend-mode: luminosity;
+
+    }
+  </style>
 </head>
 
-<body class="bg-gradient-primary">
-
+<body>
+  <div class="bg"></div>
   <div class="container">
-
+    <div id="particles-js"></div>
     <!-- Outer Row -->
     <div class="row justify-content-center">
 
@@ -146,7 +150,7 @@ if (isset($_POST['submit'])) {
 
   <!-- Core plugin JavaScript-->
   <script src="public/assets/vendor/jquery-easing/jquery.easing.min.js"></script>
-
+  <!-- <script src="./public/assets/js/particle.js"></script> -->
   <!-- Custom scripts for all pages-->
   <script src="public/assets/js/sb-admin-2.min.js"></script>
   <script>

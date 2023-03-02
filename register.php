@@ -46,16 +46,24 @@ if (isset($_POST['submit'])) {
   <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.2/dist/sweetalert2.min.css" rel="stylesheet">
   <!-- Custom fonts for this template-->
   <link href="public/assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-  <link
-    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
   <!-- Custom styles for this template-->
   <link href="public/assets/css/sb-admin-2.min.css" rel="stylesheet">
+  <style>
+    body {
 
+      background: linear-gradient(rgba(0, 0, 0, 0.7),
+          rgba(0, 0, 0, 0.7)), url('./public/assets/img/bg.jpeg') no-repeat !important;
+      background-size: cover;
+      background-position: center;
+      background-blend-mode: luminosity;
+
+    }
+  </style>
 </head>
 
-<body class="bg-gradient-primary" style="background:#e4e4e4!important">
+<body>
 
   <div class="container">
 
@@ -76,16 +84,13 @@ if (isset($_POST['submit'])) {
                   </div>
                   <form class="user" action="" method="post">
                     <div class="form-group">
-                      <input type="text" class="form-control " name="name" id="exampleInputEmail"
-                        aria-describedby="emailHelp" placeholder="Enter Name...">
+                      <input type="text" class="form-control " name="name" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Name...">
                     </div>
                     <div class="form-group">
-                      <input type="email" class="form-control " name="email" id="exampleInputEmail"
-                        aria-describedby="emailHelp" placeholder="Enter Email Address...">
+                      <input type="email" class="form-control " name="email" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address...">
                     </div>
                     <div class="form-group">
-                      <input type="password" class="form-control " name="password" id="exampleInputPassword"
-                        placeholder="Password">
+                      <input type="password" class="form-control " name="password" id="exampleInputPassword" placeholder="Password">
                     </div>
                     <!-- <div class="form-group">
                       <div class="custom-control custom-checkbox small">
@@ -128,14 +133,13 @@ if (isset($_POST['submit'])) {
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
   <!-- Core plugin JavaScript-->
   <script src="public/assets/vendor/jquery-easing/jquery.easing.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.3.slim.min.js"
-    integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.3.slim.min.js" integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo=" crossorigin="anonymous"></script>
   <!-- Custom scripts for all pages-->
   <script src="public/assets/js/sb-admin-2.min.js"></script>
   <script>
-  function hapusNotice() {
-    document.getElementById("notice").style.display = "none";
-  }
+    function hapusNotice() {
+      document.getElementById("notice").style.display = "none";
+    }
   </script>
 </body>
 

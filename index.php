@@ -12,8 +12,7 @@ if (!isset($_SESSION['name'])) {
   <div id="wrapper">
 
     <!-- Sidebar -->
-    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar"
-      style="background:  #2A3042!important">
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar" style="background:  #2A3042!important">
 
       <!-- Sidebar - Brand -->
       <?php require_once('./template/sidebar.php'); ?>
@@ -45,8 +44,7 @@ if (!isset($_SESSION['name'])) {
 
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
-              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?= $_SESSION['name']  ?></span>
                 <img class="img-profile rounded-circle" src="public/assets/img/undraw_profile.svg">
               </a>
@@ -67,8 +65,7 @@ if (!isset($_SESSION['name'])) {
 
           </ul>
           <!-- Logout Modal-->
-          <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
+          <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
