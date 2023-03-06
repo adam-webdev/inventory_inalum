@@ -74,7 +74,7 @@ function validasi_input($data)
       </div>
       <div class="row mt-2">
         <div class="col-md-12">
-          <label for="noresi">No Resi :</label>
+          <label for="noresi">No SAP :</label>
           <input type="text" name="no_resi" id="noresi" value="<?= $no_resi ?>" class="form-control" required>
         </div>
       </div>
@@ -137,12 +137,7 @@ function validasi_input($data)
       </div>
       <div class="row  mt-2 mb-2">
         <div class="col-md-6" id="alcpl">
-          <div class="d-flex align-items-centers justify-content-center">
-            <label for="acd">ACD</label>
-            <input type="radio" name="penempatan" id="acd" class=" ml-2"
-              <?php echo ($penempatan == "ALCPL ACD" ? 'checked="chechked"' : "") ?> value="ALCPL ACD"
-              style="width:25px; height:25px;cursor:pointer" required>
-          </div>
+
           <div class="d-flex align-items-centers justify-content-center">
             <label for="cast">CAST WHILE</label>
             <input type="radio" name="penempatan" id="cast" class=" ml-2"
@@ -156,31 +151,27 @@ function validasi_input($data)
               style="width:25px; height:25px;cursor:pointer">
           </div>
 
-          <div class="d-flex align-items-centers justify-content-center">
-            <label for="tod">TOD</label>
-            <input type="radio" name="penempatan" id="tod" class=" ml-2"
-              <?php echo ($penempatan == "ALCPL TOD" ? 'checked="chechked"' : "") ?> value="ALCPL TOD"
-              style="width:25px; height:25px;cursor:pointer">
-          </div>
+
         </div>
         <div class="col-md-6 " id="bcpl">
           <div class="d-flex align-items-centers justify-content-center">
-            <label for="cm">CHARGIN MACHINE</label>
+            <label for="cm">Bilet Casting</label>
             <input type="radio" name="penempatan" id="cm"
-              <?php echo ($penempatan == "BCPL Charging Machine" ? 'checked="chechked"' : "") ?> class=" ml-2"
-              value="BCPL Charging Machine" style="width:25px; height:25px;cursor:pointer" required>
+              <?php echo ($penempatan == "BCPL Bilet Casting" ? 'checked="chechked"' : "") ?> class=" ml-2"
+              value="BCPL Bilet Casting" style="width:25px; height:25px;cursor:pointer" required>
           </div>
-          <div class="d-flex align-items-centers justify-content-center">
-            <label for="homogenzing">HOMOGENZING</label>
-            <input type="radio" name="penempatan" id="homogenzing"
-              <?php echo ($penempatan == "BCPL Homogenzing" ? 'checked="chechked"' : "") ?> class=" ml-2"
-              value="BCPL Homogenzing" style="width:25px; height:25px;cursor:pointer">
-          </div>
+
           <div class="d-flex align-items-centers justify-content-center">
             <label for="fc">L FORCK CRANE</label>
             <input type="radio" name="penempatan" id="fc"
               <?php echo ($penempatan == "BCPL L FORCK CRANE" ? 'checked="chechked"' : "") ?> class=" ml-2"
               value="BCPL L FORCK CRANE" style="width:25px; height:25px;cursor:pointer">
+          </div>
+          <div class="d-flex align-items-centers justify-content-center">
+            <label for="homogenzing">Homogenezing</label>
+            <input type="radio" name="penempatan" id="homogenezing"
+              <?php echo ($penempatan == "BCPL Homogenezing" ? 'checked="chechked"' : "") ?> class=" ml-2"
+              value="BCPL Homogenezing" style="width:25px; height:25px;cursor:pointer">
           </div>
           <div class="d-flex align-items-centers justify-content-center">
             <label for="sw">SAWING</label>
@@ -209,11 +200,7 @@ $(document).ready(function() {
       $('#alcpl').html(
         `
         <div id="alcpl-child">
-         <div class="d-flex align-items-centers justify-content-center">
-              <label for="acd">ACD</label>
-              <input type="radio" name="penempatan" id="acd" class=" ml-2" value="ALCPL ACD"
-                style="width:25px; height:25px;cursor:pointer" required>
-            </div>
+
             <div class="d-flex align-items-centers justify-content-center">
               <label for="cast">CAST WHILE</label>
               <input type="radio" name="penempatan" id="cast" class=" ml-2" value="ALCPL Casting While"
@@ -225,11 +212,7 @@ $(document).ready(function() {
                 style="width:25px; height:25px;cursor:pointer">
             </div>
 
-            <div class="d-flex align-items-centers justify-content-center">
-              <label for="tod">TOD</label>
-              <input type="radio" name="penempatan" id="tod" class=" ml-2" value="ALCPL TOD"
-                style="width:25px; height:25px;cursor:pointer">
-            </div>
+
             </div>`
       )
       $('#bcpl-child').remove()

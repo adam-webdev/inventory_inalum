@@ -89,7 +89,7 @@ function validasi_input($data)
           </div>
           <div class="row mt-2">
             <div class="col-md-12">
-              <label for="noresi">No Resi :</label>
+              <label for="noresi">No SAP :</label>
               <input type="text" name="no_resi" id="noresi" class="form-control" required>
             </div>
           </div>
@@ -181,7 +181,7 @@ function validasi_input($data)
       <tr>
         <th>No</th>
         <th>Tanggal</th>
-        <th>No Resi</th>
+        <th>No SAP</th>
         <th>Nama Sparepart</th>
         <th>Meker</th>
         <th>No Rak</th>
@@ -223,7 +223,7 @@ function validasi_input($data)
       <tr>
         <th>No</th>
         <th>Tanggal</th>
-        <th>No Resi</th>
+        <th>No SAP</th>
         <th>Nama Sparepart</th>
         <th>Meker</th>
         <th>No Rak</th>
@@ -244,11 +244,6 @@ function validasi_input($data)
         $('#alcpl').html(
           `
         <div id="alcpl-child">
-         <div class="d-flex align-items-centers justify-content-center">
-              <label for="meker1">ACD</label>
-              <input type="radio" name="penempatan" id="meker1" class=" ml-2" value="ALCPL ACD"
-                style="width:25px; height:25px;cursor:pointer" required>
-            </div>
             <div class="d-flex align-items-centers justify-content-center">
               <label for="meker3">CAST WHILE</label>
               <input type="radio" name="penempatan" id="meker2" class=" ml-2" value="ALCPL Casting While"
@@ -260,12 +255,7 @@ function validasi_input($data)
                 style="width:25px; height:25px;cursor:pointer">
             </div>
 
-            <div class="d-flex align-items-centers justify-content-center">
-              <label for="meker4">TOD</label>
-              <input type="radio" name="penempatan" id="meker4" class=" ml-2" value="ALCPL TOD"
-                style="width:25px; height:25px;cursor:pointer">
-            </div>
-            </div>`
+        </div>`
         )
         $('#bcpl-child').remove()
       } else if (this.value == 'BCPL') {

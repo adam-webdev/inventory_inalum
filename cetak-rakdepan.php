@@ -16,7 +16,7 @@ $pdf->SetFont('Times', 'B', 12);
 $pdf->SetFillColor('000000', '000000', '000000');
 $pdf->Cell(10, 12, 'NO', 1, 0, 'C');
 $pdf->Cell(25, 12, 'Tanggal', 1, 0, 'C');
-$pdf->Cell(25, 12, 'No Resi', 1, 0, 'C');
+$pdf->Cell(25, 12, 'No SAP', 1, 0, 'C');
 $pdf->Cell(30, 12, 'Sparepart', 1, 0, 'C');
 $pdf->Cell(25, 12, 'Meker', 1, 0, 'C');
 $pdf->Cell(25, 12, 'No Rak', 1, 0, 'C');

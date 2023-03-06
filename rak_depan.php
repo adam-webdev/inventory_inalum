@@ -69,7 +69,8 @@ function validasi_input($data)
 
 ?>
 
-<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+  aria-hidden="true">
   <div class="modal-dialog ">
     <div class="modal-content">
       <div class="modal-header">
@@ -89,7 +90,7 @@ function validasi_input($data)
           </div>
           <div class="row mt-2">
             <div class="col-md-12">
-              <label for="noresi">No Resi :</label>
+              <label for="noresi">No SAP :</label>
               <input type="text" name="no_resi" id="noresi" class="form-control" required>
             </div>
           </div>
@@ -104,13 +105,15 @@ function validasi_input($data)
             <div class="col-md-6">
               <div class="d-flex align-items-centers justify-content-center">
                 <label for="meker1">HEWRITCH</label>
-                <input type="radio" name="meker" id="meker1" class=" ml-2" value="HERWITCH" style="width:25px; height:25px;cursor:pointer" required>
+                <input type="radio" name="meker" id="meker1" class=" ml-2" value="HERWITCH"
+                  style="width:25px; height:25px;cursor:pointer" required>
               </div>
             </div>
             <div class="col-md-6 ">
               <div class="d-flex align-items-centers justify-content-center">
                 <label for="meker2">HYCASHT</label>
-                <input type="radio" name="meker" id="meker2" class=" ml-2" value="HYCASHT" style="width:25px; height:25px;cursor:pointer">
+                <input type="radio" name="meker" id="meker2" class=" ml-2" value="HYCASHT"
+                  style="width:25px; height:25px;cursor:pointer">
               </div>
             </div>
           </div>
@@ -132,14 +135,16 @@ function validasi_input($data)
             <div class="col-md-6">
               <div class="d-flex align-items-centers justify-content-center">
                 <label for="meker1">ALCPL</label>
-                <input type="radio" name="pilihan_penempatan" id="meker1" class=" ml-2" value="ALCPL" style="width:25px; height:25px;cursor:pointer">
+                <input type="radio" name="pilihan_penempatan" id="meker1" class=" ml-2" value="ALCPL"
+                  style="width:25px; height:25px;cursor:pointer">
               </div>
 
             </div>
             <div class="col-md-6 ">
               <div class="d-flex align-items-centers justify-content-center">
                 <label for="meker2">BCPL</label>
-                <input type="radio" name="pilihan_penempatan" id="meker2" class=" ml-2" value="BCPL" style="width:25px; height:25px;cursor:pointer">
+                <input type="radio" name="pilihan_penempatan" id="meker2" class=" ml-2" value="BCPL"
+                  style="width:25px; height:25px;cursor:pointer">
               </div>
             </div>
           </div>
@@ -184,7 +189,7 @@ function validasi_input($data)
       <tr>
         <th>No</th>
         <th>Tanggal</th>
-        <th>No Resi</th>
+        <th>No SAP</th>
         <th>Nama Sparepart</th>
         <th>Meker</th>
         <th>No Rak</th>
@@ -200,24 +205,27 @@ function validasi_input($data)
       $no = 1;
       while ($row = mysqli_fetch_assoc($query)) {
       ?>
-        <tr>
-          <td><?= $no++ ?></td>
-          <td><?= DateTime::createFromFormat('Y-m-d', $row['tanggal'])->format('d-m-Y') ?></td>
-          <td><?= $row['no_resi'] ?></td>
-          <td><?= $row['nama_sparepart'] ?></td>
-          <td><?= $row['meker'] ?></td>
-          <td><?= $row['no_rak'] ?></td>
-          <td><?= $row['jumlah'] ?></td>
-          <td><?= $row['penempatan'] ?></td>
-          <td align="center" width="15%">
-            <a href="index.php?page=edit-rak-depan&id=<?= $row['id'] ?>" data-toggle="tooltip" title="Edit" style="background:  #2A3042;color:#ffffff;" class="d-none  d-sm-inline-block btn btn-sm shadow-sm">
-              <i class="fas fa-edit fa-sm text-white-50"></i>
-            </a>
-            <a href="delete-rak-depan.php?id=<?= $row['id'] ?>" data-toggle="tooltip" title="Hapus" onclick="return confirm('Yakin Ingin menghapus data?')" style="background: red" class="d-none d-sm-inline-block btn btn-sm  shadow-sm">
-              <i class="fas fa-trash-alt fa-sm text-white-50"></i>
-            </a>
-          </td>
-        </tr>
+      <tr>
+        <td><?= $no++ ?></td>
+        <td><?= DateTime::createFromFormat('Y-m-d', $row['tanggal'])->format('d-m-Y') ?></td>
+        <td><?= $row['no_resi'] ?></td>
+        <td><?= $row['nama_sparepart'] ?></td>
+        <td><?= $row['meker'] ?></td>
+        <td><?= $row['no_rak'] ?></td>
+        <td><?= $row['jumlah'] ?></td>
+        <td><?= $row['penempatan'] ?></td>
+        <td align="center" width="15%">
+          <a href="index.php?page=edit-rak-depan&id=<?= $row['id'] ?>" data-toggle="tooltip" title="Edit"
+            style="background:  #2A3042;color:#ffffff;" class="d-none  d-sm-inline-block btn btn-sm shadow-sm">
+            <i class="fas fa-edit fa-sm text-white-50"></i>
+          </a>
+          <a href="delete-rak-depan.php?id=<?= $row['id'] ?>" data-toggle="tooltip" title="Hapus"
+            onclick="return confirm('Yakin Ingin menghapus data?')" style="background: red"
+            class="d-none d-sm-inline-block btn btn-sm  shadow-sm">
+            <i class="fas fa-trash-alt fa-sm text-white-50"></i>
+          </a>
+        </td>
+      </tr>
       <?php
       }
       ?>
@@ -226,7 +234,7 @@ function validasi_input($data)
       <tr>
         <th>No</th>
         <th>Tanggal</th>
-        <th>No Resi</th>
+        <th>No SAP</th>
         <th>Nama Sparepart</th>
         <th>Meker</th>
         <th>No Rak</th>
@@ -239,19 +247,15 @@ function validasi_input($data)
 </div>
 
 <script>
-  $(document).ready(function() {
-    $('#example').DataTable();
+$(document).ready(function() {
+  $('#example').DataTable();
 
-    $('input[type=radio][name=pilihan_penempatan]').change(function() {
-      if (this.value == 'ALCPL') {
-        $('#alcpl').html(
-          `
+  $('input[type=radio][name=pilihan_penempatan]').change(function() {
+    if (this.value == 'ALCPL') {
+      $('#alcpl').html(
+        `
         <div id="alcpl-child">
-         <div class="d-flex align-items-centers justify-content-center">
-              <label for="meker1">ACD</label>
-              <input type="radio" name="penempatan" id="meker1" class=" ml-2" value="AICPL ACD"
-                style="width:25px; height:25px;cursor:pointer" required>
-            </div>
+
             <div class="d-flex align-items-centers justify-content-center">
               <label for="meker3">CAST WHILE</label>
               <input type="radio" name="penempatan" id="meker2" class=" ml-2" value="AICPL Casting While"
@@ -263,45 +267,41 @@ function validasi_input($data)
                 style="width:25px; height:25px;cursor:pointer">
             </div>
 
-            <div class="d-flex align-items-centers justify-content-center">
-              <label for="meker4">TOD</label>
-              <input type="radio" name="penempatan" id="meker4" class=" ml-2" value="AICPL TOD"
-                style="width:25px; height:25px;cursor:pointer">
-            </div>
+
             </div>`
-        )
-        $('#bcpl-child').remove()
-      } else if (this.value == 'BCPL') {
-        $('#bcpl').html(
-          `<div id="bcpl-child">
-        <div class="d-flex align-items-centers justify-content-center">
-              <label for="meker5">CHARGIN MACHINE</label>
-              <input type="radio" name="penempatan" id="meker5" class=" ml-2" value="BCPL Charging Machine"
+      )
+      $('#bcpl-child').remove()
+    } else if (this.value == 'BCPL') {
+      $('#bcpl').html(
+        `<div id="bcpl-child">
+            <div class="d-flex align-items-centers justify-content-center">
+              <label for="meker5">Bilet Casting</label>
+              <input type="radio" name="penempatan" id="meker5" class=" ml-2" value="BCPL Bilet Casting"
                 style="width:25px; height:25px;cursor:pointer" required>
             </div>
-             <div class="d-flex align-items-centers justify-content-center">
-              <label for="meker6">HOMOGENZING</label>
-              <input type="radio" name="penempatan" id="meker6" class=" ml-2" value="BCPL Homogenzing"
+
+            <div class="d-flex align-items-centers justify-content-center">
+              <label for="meker7">Bilet Headling</label>
+              <input type="radio" name="penempatan" id="meker7" class=" ml-2" value="BCPL Bilet Headling"
                 style="width:25px; height:25px;cursor:pointer">
             </div>
             <div class="d-flex align-items-centers justify-content-center">
-              <label for="meker7">L FORCK CRANE</label>
-              <input type="radio" name="penempatan" id="meker7" class=" ml-2" value="BCPL L FORCK CRANE"
+              <label for="meker6">Homogenezing</label>
+              <input type="radio" name="penempatan" id="meker6" class=" ml-2" value="BCPL Homogenezing"
                 style="width:25px; height:25px;cursor:pointer">
             </div>
-
 
             <div class="d-flex align-items-centers justify-content-center">
-              <label for="meker8">SAWING</label>
-              <input type="radio" name="penempatan" id="meker8" class=" ml-2" value="BCPL Sawing"
+              <label for="meker8">Bilet Sawing</label>
+              <input type="radio" name="penempatan" id="meker8" class=" ml-2" value="BCPL Bilet Sawing"
                 style="width:25px; height:25px;cursor:pointer">
             </div>
-            </div>`
-        )
-        $('#alcpl-child').remove()
+        </div>`
+      )
+      $('#alcpl-child').remove()
 
-      }
-    });
-
+    }
   });
+
+});
 </script>
