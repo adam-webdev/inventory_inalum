@@ -103,14 +103,14 @@ function validasi_input($data)
           <div class="row  mt-2">
             <div class="col-md-6">
               <div class="d-flex align-items-centers justify-content-center">
-                <label for="meker1">HEWRITCH</label>
-                <input type="radio" name="meker" id="meker1" class=" ml-2" value="HERWITCH" style="width:25px; height:25px;cursor:pointer" required>
+                <label for="hew">HEWRITCH</label>
+                <input type="radio" name="meker" id="hew" class=" ml-2" value="HERWITCH" style="width:25px; height:25px;cursor:pointer" required>
               </div>
             </div>
             <div class="col-md-6 ">
               <div class="d-flex align-items-centers justify-content-center">
-                <label for="meker2">HYCASHT</label>
-                <input type="radio" name="meker" id="meker2" class=" ml-2" value="HYCASHT" style="width:25px; height:25px;cursor:pointer">
+                <label for="hy">HYCASHT</label>
+                <input type="radio" name="meker" id="hy" class=" ml-2" value="HYCASHT" style="width:25px; height:25px;cursor:pointer">
               </div>
             </div>
           </div>
@@ -131,8 +131,8 @@ function validasi_input($data)
 
             <div class="col-md-6">
               <div class="d-flex align-items-centers justify-content-center">
-                <label for="meker1">ALCPL</label>
-                <input type="radio" name="pilihan_penempatan" id="meker1" class=" ml-2" value="ALCPL" style="width:25px; height:25px;cursor:pointer">
+                <label for="meker1">AICPL</label>
+                <input type="radio" name="pilihan_penempatan" id="meker1" class=" ml-2" value="AICPL" style="width:25px; height:25px;cursor:pointer">
               </div>
 
             </div>
@@ -240,50 +240,50 @@ function validasi_input($data)
     $('#example').DataTable();
 
     $('input[type=radio][name=pilihan_penempatan]').change(function() {
-      if (this.value == 'ALCPL') {
-        $('#alcpl').html(
-          `
-        <div id="alcpl-child">
-            <div class="d-flex align-items-centers justify-content-center">
-              <label for="meker3">CAST WHILE</label>
-              <input type="radio" name="penempatan" id="meker2" class=" ml-2" value="ALCPL Casting While"
-                style="width:25px; height:25px;cursor:pointer">
-            </div>
-            <div class="d-flex align-items-centers justify-content-center">
-              <label for="meker3">DROP OUT</label>
-              <input type="radio" name="penempatan" id="meker3" class=" ml-2" value="ALCPL Drop Out"
-                style="width:25px; height:25px;cursor:pointer">
-            </div>
+      // if (this.value == 'ALCPL') {
+      //   $('#alcpl').html(
+      //     `
+      //   <div id="alcpl-child">
+      //       <div class="d-flex align-items-centers justify-content-center">
+      //         <label for="meker3">CAST WHILE</label>
+      //         <input type="radio" name="penempatan" id="meker2" class=" ml-2" value="ALCPL Casting While"
+      //           style="width:25px; height:25px;cursor:pointer">
+      //       </div>
+      //       <div class="d-flex align-items-centers justify-content-center">
+      //         <label for="meker3">DROP OUT</label>
+      //         <input type="radio" name="penempatan" id="meker3" class=" ml-2" value="ALCPL Drop Out"
+      //           style="width:25px; height:25px;cursor:pointer">
+      //       </div>
 
-        </div>`
-        )
-        $('#bcpl-child').remove()
-      } else if (this.value == 'BCPL') {
+      //   </div>`
+      //   )
+      //   $('#bcpl-child').remove()
+      if (this.value == 'BCPL') {
         $('#bcpl').html(
           `<div id="bcpl-child">
-        <div class="d-flex align-items-centers justify-content-center">
-              <label for="meker5">CHARGIN MACHINE</label>
-              <input type="radio" name="penempatan" id="meker5" class=" ml-2" value="BCPL Charging Machine"
+            <div class="d-flex align-items-centers justify-content-center">
+              <label for="meker5">Bilet Casting</label>
+              <input type="radio" name="penempatan" id="meker5" class=" ml-2" value="BCPL Bilet Casting"
                 style="width:25px; height:25px;cursor:pointer" required>
             </div>
-             <div class="d-flex align-items-centers justify-content-center">
-              <label for="meker6">HOMOGENZING</label>
-              <input type="radio" name="penempatan" id="meker6" class=" ml-2" value="BCPL Homogenzing"
+
+            <div class="d-flex align-items-centers justify-content-center">
+              <label for="meker7">Bilet Headling</label>
+              <input type="radio" name="penempatan" id="meker7" class=" ml-2" value="BCPL Bilet Headling"
                 style="width:25px; height:25px;cursor:pointer">
             </div>
             <div class="d-flex align-items-centers justify-content-center">
-              <label for="meker7">L FORCK CRANE</label>
-              <input type="radio" name="penempatan" id="meker7" class=" ml-2" value="BCPL L FORCK CRANE"
+              <label for="meker6">Homogenezing</label>
+              <input type="radio" name="penempatan" id="meker6" class=" ml-2" value="BCPL Homogenezing"
                 style="width:25px; height:25px;cursor:pointer">
             </div>
-
 
             <div class="d-flex align-items-centers justify-content-center">
-              <label for="meker8">SAWING</label>
-              <input type="radio" name="penempatan" id="meker8" class=" ml-2" value="BCPL Sawing"
+              <label for="meker8">Bilet Sawing</label>
+              <input type="radio" name="penempatan" id="meker8" class=" ml-2" value="BCPL Bilet Sawing"
                 style="width:25px; height:25px;cursor:pointer">
             </div>
-            </div>`
+        </div>`
         )
         $('#alcpl-child').remove()
 
