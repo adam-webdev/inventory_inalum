@@ -81,8 +81,7 @@ function validasi_input($data)
       <div class="row  mt-2 mb-2">
         <div class="col-md-12">
           <label for="nama">Nama Barang :</label>
-          <input type="text" name="nama_sparepart" value="<?= $nama_sparepart ?>" id="nama" class="form-control"
-            required>
+          <input type="text" name="nama_sparepart" value="<?= $nama_sparepart ?>" id="nama" class="form-control" required>
         </div>
       </div>
       <label for="">MEKER :</label><br>
@@ -90,17 +89,13 @@ function validasi_input($data)
         <div class="col-md-6">
           <div class="d-flex align-items-centers justify-content-center">
             <label for="hew">HEWRITCH</label>
-            <input type="radio" name="meker" id="hew" value="HERWITCH"
-              <?php echo ($meker == "HERWITCH" ? 'checked="chechked"' : "") ?> class=" ml-2" value="HERWITCH"
-              style="width:25px; height:25px;cursor:pointer" required>
+            <input type="radio" name="meker" id="hew" value="HERWITCH" <?php echo ($meker == "HERWITCH" ? 'checked="chechked"' : "") ?> class=" ml-2" value="HERWITCH" style="width:25px; height:25px;cursor:pointer" required>
           </div>
         </div>
         <div class="col-md-6 ">
           <div class="d-flex align-items-centers justify-content-center">
             <label for="hy">HYCASHT</label>
-            <input type="radio" name="meker" value="HYCASHT" id="hy"
-              <?php echo ($meker == "HYCASHT" ? 'checked="chechked"' : "") ?> class=" ml-2"
-              style="width:25px; height:25px;cursor:pointer">
+            <input type="radio" name="meker" value="HYCASHT" id="hy" <?php echo ($meker == "HYCASHT" ? 'checked="chechked"' : "") ?> class=" ml-2" style="width:25px; height:25px;cursor:pointer">
           </div>
         </div>
       </div>
@@ -122,17 +117,14 @@ function validasi_input($data)
         <div class="col-md-6">
           <div class="d-flex align-items-centers justify-content-center">
             <label for="meker1">AICPL</label>
-            <input type="radio" <?php echo ($penempatan == "AICPL" ? 'checked="chechked"' : "") ?>
-              name="pilihan_penempatan" id="meker1" class=" ml-2" value="AICPL"
-              style="width:25px; height:25px;cursor:pointer">
+            <input type="radio" <?php echo ($penempatan == "AICPL" ? 'checked="chechked"' : "") ?> name="penempatan" id="meker1" class=" ml-2" value="AICPL" style="width:25px; height:25px;cursor:pointer">
           </div>
 
         </div>
         <div class="col-md-6 ">
           <div class="d-flex align-items-centers justify-content-center">
             <label for="meker2">BCPL</label>
-            <input type="radio" name="pilihan_penempatan" id="meker2" class=" ml-2" value="BCPL"
-              style="width:25px; height:25px;cursor:pointer">
+            <input type="radio" name="pilihan_penempatan" id="meker2" class=" ml-2" value="BCPL" style="width:25px; height:25px;cursor:pointer">
           </div>
         </div>
       </div>
@@ -157,28 +149,20 @@ function validasi_input($data)
         <div class="col-md-6 " id="bcpl">
           <div class="d-flex align-items-centers justify-content-center">
             <label for="cm">Bilet Casting</label>
-            <input type="radio" name="penempatan" id="cm"
-              <?php echo ($penempatan == "BCPL Bilet Casting" ? 'checked="chechked"' : "") ?> class=" ml-2"
-              value="BCPL Bilet Casting" style="width:25px; height:25px;cursor:pointer" required>
+            <input type="radio" name="penempatan" id="cm" <?php echo ($penempatan == "BCPL Bilet Casting" ? 'checked="chechked"' : "") ?> class=" ml-2" value="BCPL Bilet Casting" style="width:25px; height:25px;cursor:pointer" required>
           </div>
 
           <div class="d-flex align-items-centers justify-content-center">
             <label for="fc">Bilet Headling</label>
-            <input type="radio" name="penempatan" id="fc"
-              <?php echo ($penempatan == "BCPL Bilet Headling" ? 'checked="chechked"' : "") ?> class=" ml-2"
-              value="BCPL Bilet Headling" style="width:25px; height:25px;cursor:pointer">
+            <input type="radio" name="penempatan" id="fc" <?php echo ($penempatan == "BCPL Bilet Headling" ? 'checked="chechked"' : "") ?> class=" ml-2" value="BCPL Bilet Headling" style="width:25px; height:25px;cursor:pointer">
           </div>
           <div class="d-flex align-items-centers justify-content-center">
             <label for="homogenzing">Homogenezing</label>
-            <input type="radio" name="penempatan" id="homogenezing"
-              <?php echo ($penempatan == "BCPL Homogenezing" ? 'checked="chechked"' : "") ?> class=" ml-2"
-              value="BCPL Homogenezing" style="width:25px; height:25px;cursor:pointer">
+            <input type="radio" name="penempatan" id="homogenezing" <?php echo ($penempatan == "BCPL Homogenezing" ? 'checked="chechked"' : "") ?> class=" ml-2" value="BCPL Homogenezing" style="width:25px; height:25px;cursor:pointer">
           </div>
           <div class="d-flex align-items-centers justify-content-center">
             <label for="sw">Bilet Sawing</label>
-            <input type="radio" name="penempatan" id="sw"
-              <?php echo ($penempatan == "BCPL Bilet Sawing" ? 'checked="chechked"' : "") ?> class=" ml-2"
-              value="BCPL Bilet Sawing" style="width:25px; height:25px;cursor:pointer">
+            <input type="radio" name="penempatan" id="sw" <?php echo ($penempatan == "BCPL Bilet Sawing" ? 'checked="chechked"' : "") ?> class=" ml-2" value="BCPL Bilet Sawing" style="width:25px; height:25px;cursor:pointer">
           </div>
         </div>
       </div>
@@ -193,33 +177,33 @@ function validasi_input($data)
 </div>
 
 <script>
-$(document).ready(function() {
-  $('#example').DataTable();
+  $(document).ready(function() {
+    $('#example').DataTable();
 
-  $('input[type=radio][name=pilihan_penempatan]').change(function() {
-    if (this.value == 'AICPL') {
-      //   $('#alcpl').html(
-      //     `
-      //   <div id="alcpl-child">
+    $('input[type=radio][name=pilihan_penempatan]').change(function() {
+      if (this.value == 'AICPL') {
+        //   $('#alcpl').html(
+        //     `
+        //   <div id="alcpl-child">
 
-      //       <div class="d-flex align-items-centers justify-content-center">
-      //         <label for="cast">CAST WHILE</label>
-      //         <input type="radio" name="penempatan" id="cast" class=" ml-2" value="ALCPL Casting While"
-      //           style="width:25px; height:25px;cursor:pointer">
-      //       </div>
-      //       <div class="d-flex align-items-centers justify-content-center">
-      //         <label for="do">DROP OUT</label>
-      //         <input type="radio" name="penempatan" id="do" class=" ml-2" value="ALCPL Drop Out"
-      //           style="width:25px; height:25px;cursor:pointer">
-      //       </div>
+        //       <div class="d-flex align-items-centers justify-content-center">
+        //         <label for="cast">CAST WHILE</label>
+        //         <input type="radio" name="penempatan" id="cast" class=" ml-2" value="ALCPL Casting While"
+        //           style="width:25px; height:25px;cursor:pointer">
+        //       </div>
+        //       <div class="d-flex align-items-centers justify-content-center">
+        //         <label for="do">DROP OUT</label>
+        //         <input type="radio" name="penempatan" id="do" class=" ml-2" value="ALCPL Drop Out"
+        //           style="width:25px; height:25px;cursor:pointer">
+        //       </div>
 
 
-      //       </div>`
-      //   )
-      $('#bcpl-child').remove()
-    } else if (this.value == 'BCPL') {
-      $('#bcpl').html(
-        `<div id="bcpl-child">
+        //       </div>`
+        //   )
+        $('#bcpl-child').remove()
+      } else if (this.value == 'BCPL') {
+        $('#bcpl').html(
+          `<div id="bcpl-child">
             <div class="d-flex align-items-centers justify-content-center">
               <label for="meker5">Bilet Casting</label>
               <input type="radio" name="penempatan" id="meker5" class=" ml-2" value="BCPL Bilet Casting"
@@ -243,11 +227,11 @@ $(document).ready(function() {
                 style="width:25px; height:25px;cursor:pointer">
             </div>
         </div>`
-      )
-      $('#alcpl-child').remove()
+        )
+        $('#alcpl-child').remove()
 
-    }
+      }
+    });
+
   });
-
-});
 </script>
