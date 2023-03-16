@@ -83,7 +83,7 @@
     $sheet->setCellValue('B1', 'Tanggal');
     $sheet->setCellValue('C1', 'No SAP');
     $sheet->setCellValue('D1', 'Nama Sparepart');
-    $sheet->setCellValue('E1', 'Meker');
+    $sheet->setCellValue('E1', 'Maker');
     $sheet->setCellValue('F1', 'No Rak');
     $sheet->setCellValue('G1', 'Jumlah');
     $sheet->setCellValue('H1', 'Penempatan');

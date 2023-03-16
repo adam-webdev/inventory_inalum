@@ -7,32 +7,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style type="text/css">
-  body {
-    font-family: sans-serif;
-  }
+    body {
+      font-family: sans-serif;
+    }
 
-  table {
-    margin: 20px auto;
-    border: 1px solid black;
-    border-collapse: collapse;
-  }
+    table {
+      margin: 20px auto;
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
 
 
-  table th,
-  table td {
-    border: 1px solid black;
-    padding: 10px 12px;
-    text-align: center;
+    table th,
+    table td {
+      border: 1px solid black;
+      padding: 10px 12px;
+      text-align: center;
 
-  }
+    }
 
-  a {
-    background: blue;
-    color: #fff;
-    padding: 8px 10px;
-    text-decoration: none;
-    border-radius: 2px;
-  }
+    a {
+      background: blue;
+      color: #fff;
+      padding: 8px 10px;
+      text-decoration: none;
+      border-radius: 2px;
+    }
   </style>
 </head>
 
@@ -83,7 +83,7 @@
     $sheet->setCellValue('B1', 'Tanggal');
     $sheet->setCellValue('C1', 'No SAP');
     $sheet->setCellValue('D1', 'Nama Sparepart');
-    $sheet->setCellValue('E1', 'Meker');
+    $sheet->setCellValue('E1', 'Maker');
     $sheet->setCellValue('F1', 'No Rak');
     $sheet->setCellValue('G1', 'Jumlah');
     $sheet->setCellValue('H1', 'Penempatan');

@@ -26,7 +26,11 @@ if (isset($_POST['update'])) {
   $meker = validasi_input($_POST['meker']);
   $no_rak = validasi_input($_POST['no_rak']);
   $jumlah = validasi_input($_POST['jumlah']);
-  $penempatan = validasi_input($_POST['penempatan']);
+  if ($_POST['penempatan']) {
+    $penempatan = validasi_input($_POST['penempatan']);
+  } else {
+    $penempatan = validasi_input($_POST['pilihan_penempatan']);
+  }
 
   $sql = "UPDATE rak_depan SET tanggal='$tanggal',no_resi='$noresi',nama_sparepart='$nama_sparepart',meker='$meker',no_rak='$no_rak',jumlah='$jumlah',penempatan='$penempatan' WHERE id='$id'";
   $query = mysqli_query($conn, $sql);
@@ -81,21 +85,26 @@ function validasi_input($data)
       <div class="row  mt-2 mb-2">
         <div class="col-md-12">
           <label for="nama">Nama Barang :</label>
-          <input type="text" name="nama_sparepart" value="<?= $nama_sparepart ?>" id="nama" class="form-control" required>
+          <input type="text" name="nama_sparepart" value="<?= $nama_sparepart ?>" id="nama" class="form-control"
+            required>
         </div>
       </div>
-      <label for="">MEKER :</label><br>
+      <label for="">MAKER :</label><br>
       <div class="row  mt-2">
         <div class="col-md-6">
           <div class="d-flex align-items-centers justify-content-center">
             <label for="hew">HEWRITCH</label>
-            <input type="radio" name="meker" id="hew" value="HERWITCH" <?php echo ($meker == "HERWITCH" ? 'checked="chechked"' : "") ?> class=" ml-2" value="HERWITCH" style="width:25px; height:25px;cursor:pointer" required>
+            <input type="radio" name="meker" id="hew" value="HERWITCH"
+              <?php echo ($meker == "HERWITCH" ? 'checked="chechked"' : "") ?> class=" ml-2" value="HERWITCH"
+              style="width:25px; height:25px;cursor:pointer" required>
           </div>
         </div>
         <div class="col-md-6 ">
           <div class="d-flex align-items-centers justify-content-center">
             <label for="hy">HYCASHT</label>
-            <input type="radio" name="meker" value="HYCASHT" id="hy" <?php echo ($meker == "HYCASHT" ? 'checked="chechked"' : "") ?> class=" ml-2" style="width:25px; height:25px;cursor:pointer">
+            <input type="radio" name="meker" value="HYCASHT" id="hy"
+              <?php echo ($meker == "HYCASHT" ? 'checked="chechked"' : "") ?> class=" ml-2"
+              style="width:25px; height:25px;cursor:pointer">
           </div>
         </div>
       </div>
@@ -117,14 +126,17 @@ function validasi_input($data)
         <div class="col-md-6">
           <div class="d-flex align-items-centers justify-content-center">
             <label for="meker1">AICPL</label>
-            <input type="radio" <?php echo ($penempatan == "AICPL" ? 'checked="chechked"' : "") ?> name="penempatan" id="meker1" class=" ml-2" value="AICPL" style="width:25px; height:25px;cursor:pointer">
+            <input type="radio" <?php echo ($penempatan == "AICPL" ? 'checked="chechked"' : "") ?>
+              name="pilihan_penempatan" id="meker1" class=" ml-2" value="AICPL"
+              style="width:25px; height:25px;cursor:pointer">
           </div>
 
         </div>
         <div class="col-md-6 ">
           <div class="d-flex align-items-centers justify-content-center">
             <label for="meker2">BCPL</label>
-            <input type="radio" name="pilihan_penempatan" id="meker2" class=" ml-2" value="BCPL" style="width:25px; height:25px;cursor:pointer">
+            <input type="radio" name="pilihan_penempatan" id="meker2" class=" ml-2" value="BCPL"
+              style="width:25px; height:25px;cursor:pointer">
           </div>
         </div>
       </div>
@@ -148,21 +160,29 @@ function validasi_input($data)
         </div>
         <div class="col-md-6 " id="bcpl">
           <div class="d-flex align-items-centers justify-content-center">
-            <label for="cm">Bilet Casting</label>
-            <input type="radio" name="penempatan" id="cm" <?php echo ($penempatan == "BCPL Bilet Casting" ? 'checked="chechked"' : "") ?> class=" ml-2" value="BCPL Bilet Casting" style="width:25px; height:25px;cursor:pointer" required>
+            <label for="cm">Billet Casting</label>
+            <input type="radio" name="penempatan" id="cm"
+              <?php echo ($penempatan == "BCPL Billet Casting" ? 'checked="chechked"' : "") ?> class=" ml-2"
+              value="BCPL Billet Casting" style="width:25px; height:25px;cursor:pointer" required>
           </div>
 
           <div class="d-flex align-items-centers justify-content-center">
-            <label for="fc">Bilet Headling</label>
-            <input type="radio" name="penempatan" id="fc" <?php echo ($penempatan == "BCPL Bilet Headling" ? 'checked="chechked"' : "") ?> class=" ml-2" value="BCPL Bilet Headling" style="width:25px; height:25px;cursor:pointer">
+            <label for="fc">Bilet Handling</label>
+            <input type="radio" name="penempatan" id="fc"
+              <?php echo ($penempatan == "BCPL Billet Handling" ? 'checked="chechked"' : "") ?> class=" ml-2"
+              value="BCPL Billet Handling" style="width:25px; height:25px;cursor:pointer">
           </div>
           <div class="d-flex align-items-centers justify-content-center">
             <label for="homogenzing">Homogenezing</label>
-            <input type="radio" name="penempatan" id="homogenezing" <?php echo ($penempatan == "BCPL Homogenezing" ? 'checked="chechked"' : "") ?> class=" ml-2" value="BCPL Homogenezing" style="width:25px; height:25px;cursor:pointer">
+            <input type="radio" name="penempatan" id="homogenezing"
+              <?php echo ($penempatan == "BCPL Homogenezing" ? 'checked="chechked"' : "") ?> class=" ml-2"
+              value="BCPL Homogenezing" style="width:25px; height:25px;cursor:pointer">
           </div>
           <div class="d-flex align-items-centers justify-content-center">
-            <label for="sw">Bilet Sawing</label>
-            <input type="radio" name="penempatan" id="sw" <?php echo ($penempatan == "BCPL Bilet Sawing" ? 'checked="chechked"' : "") ?> class=" ml-2" value="BCPL Bilet Sawing" style="width:25px; height:25px;cursor:pointer">
+            <label for="sw">Billet Sawing</label>
+            <input type="radio" name="penempatan" id="sw"
+              <?php echo ($penempatan == "BCPL Billet Sawing" ? 'checked="chechked"' : "") ?> class=" ml-2"
+              value="BCPL Billet Sawing" style="width:25px; height:25px;cursor:pointer">
           </div>
         </div>
       </div>
@@ -177,42 +197,37 @@ function validasi_input($data)
 </div>
 
 <script>
-  $(document).ready(function() {
-    $('#example').DataTable();
+$(document).ready(function() {
+  $('#example').DataTable();
 
-    $('input[type=radio][name=pilihan_penempatan]').change(function() {
-      if (this.value == 'AICPL') {
-        //   $('#alcpl').html(
-        //     `
-        //   <div id="alcpl-child">
+  $('input[type=radio][name=pilihan_penempatan]').change(function() {
+    if (this.value == 'AICPL') {
+      $('#alcpl').html(
+        `
+        <div id="alcpl-child" style="display:none">
 
-        //       <div class="d-flex align-items-centers justify-content-center">
-        //         <label for="cast">CAST WHILE</label>
-        //         <input type="radio" name="penempatan" id="cast" class=" ml-2" value="ALCPL Casting While"
-        //           style="width:25px; height:25px;cursor:pointer">
-        //       </div>
-        //       <div class="d-flex align-items-centers justify-content-center">
-        //         <label for="do">DROP OUT</label>
-        //         <input type="radio" name="penempatan" id="do" class=" ml-2" value="ALCPL Drop Out"
-        //           style="width:25px; height:25px;cursor:pointer">
-        //       </div>
-
-
-        //       </div>`
-        //   )
-        $('#bcpl-child').remove()
-      } else if (this.value == 'BCPL') {
-        $('#bcpl').html(
-          `<div id="bcpl-child">
             <div class="d-flex align-items-centers justify-content-center">
-              <label for="meker5">Bilet Casting</label>
+              <label for="meker3">CAST WHILE</label>
+              <input type="radio" checked name="penempatan" id="meker2" class=" ml-2" value="AICPL"
+                style="width:25px; height:25px;cursor:pointer">
+            </div>
+
+
+            </div>`
+      )
+      $('#bcpl-child').remove()
+    } else if (this.value == 'BCPL') {
+      $('#bcpl').html(
+        `<div id="bcpl-child">
+            <div class="d-flex align-items-centers justify-content-center">
+              <label for="meker5">Billet Casting</label>
               <input type="radio" name="penempatan" id="meker5" class=" ml-2" value="BCPL Bilet Casting"
                 style="width:25px; height:25px;cursor:pointer" required>
             </div>
 
             <div class="d-flex align-items-centers justify-content-center">
-              <label for="meker7">Bilet Headling</label>
-              <input type="radio" name="penempatan" id="meker7" class=" ml-2" value="BCPL Bilet Headling"
+              <label for="meker7">Billet Handling</label>
+              <input type="radio" name="penempatan" id="meker7" class=" ml-2" value="BCPL Billet Handling"
                 style="width:25px; height:25px;cursor:pointer">
             </div>
             <div class="d-flex align-items-centers justify-content-center">
@@ -222,16 +237,16 @@ function validasi_input($data)
             </div>
 
             <div class="d-flex align-items-centers justify-content-center">
-              <label for="meker8">Bilet Sawing</label>
-              <input type="radio" name="penempatan" id="meker8" class=" ml-2" value="BCPL Bilet Sawing"
+              <label for="meker8">Billet Sawing</label>
+              <input type="radio" name="penempatan" id="meker8" class=" ml-2" value="BCPL Billet Sawing"
                 style="width:25px; height:25px;cursor:pointer">
             </div>
         </div>`
-        )
-        $('#alcpl-child').remove()
+      )
+      $('#alcpl-child').remove()
 
-      }
-    });
-
+    }
   });
+
+});
 </script>
